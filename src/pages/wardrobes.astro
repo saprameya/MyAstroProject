@@ -560,10 +560,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     @media (width <= 1024px) and (max-height: 600px), (orientation: portrait) {
       /* position: absolute; */
       width: 100%;
-      /* bottom: 0; */
       padding-block: 1rem;
       z-index: 10;
-      margin-bottom: 2vh;
     }
   }
 
@@ -604,7 +602,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     z-index: 5;
 
     @media (width <= 1024px) and (max-height: 600px), (orientation: portrait) {
-      top: 200%;
+      top: calc(100% + 100vh);
     }
   }
 </style>
