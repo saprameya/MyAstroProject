@@ -1,17 +1,142 @@
 ---
-
+import BaseLayout  from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+       <div class="hero">
+          <div class="hero-img initial">
+            <picture>
+              <source
+              srcset="images/landing-mobile.webp"
+              media="((max-width: 1024px) and (max-height: 600px)) or (orientation: portrait)"
+              width="1122" height="1042"/>
+              <img src="images/landing-stretched.webp" alt="Image showing kitchen and bedroom" width="1920" height="1080" />
+            </picture>
+
+            <div class="kitchen-overlay">
+              <picture>
+                <source 
+                srcset="images/kitchen-highlight-mobile.webp" 
+                media="((max-width: 1024px) and (max-height: 600px)) or (orientation: portrait)" width="1122" />
+                <img src="images/kitchen-highlight-stretched.webp" alt="" aria-hidden="true" width="1920" />
+              </picture>
+            </div>
+            <div class="wardrobe-overlay">
+              <picture>
+                <source 
+                srcset="images/wardrobe-highlight-mobile.webp"
+                 media="((max-width: 1024px) and (max-height: 600px)) or (orientation: portrait)" width="1119" />
+                <img src="images/wardrobe-highlight-stretched.webp" alt="" aria-hidden="true" width="1920" />
+              </picture>
+            </div>
+            <div class="bedroom-overlay">
+              <picture>
+                <source 
+                srcset="images/bedroom-highlight-mobile.webp" 
+                media="((max-width: 1024px) and (max-height: 600px)) or (orientation: portrait)" width="1122" />
+                <img src="images/bedroom-highlight-stretched.webp" alt="" aria-hidden="true" width="1920" />
+              </picture>
+            </div>
+          </div>
+          <div class="tagline init">
+            <div class="tagline-content">
+              <h1 class="tagline-heading">Every home knows a <em>different</em> story.</h1>
+              <div class="hero-paragraph">
+                <div class="hero-subtitle">The best homes know the people who live in them.</div>
+              </div>
+            </div>
+            <div class="options">
+              <div class="learn-more learn-more-text link">Discover the Vision</div>
+            </div>
+          </div>
+          <div class="countdown">
+            <span class="current-span"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="slides">
+            <div class="slide slide2 kitchen-slide" data-slide-num="1">
+              <p>The kitchen knows that recipes are only part of what happens here.</p>
+              <p>It remembers conversations, celebrations, and quiet cups of tea.</p>
+            </div>
+            <div class="slide slide3 wardrobe-slide" data-slide-num="2">
+              <p>The wardrobe knows that every morning begins differently.</p>
+              <p>Some mornings need order. Others need a little more time.</p>
+            </div>
+
+            <div class="slide slide4 bedroom-slide" data-slide-num="3">
+              <p>The bedroom is where we finally slow down.</p>
+              <p>Because every home should feel like it knows you.</p>
+            </div>
+            <div class="slide slide1" data-slide-num="4">
+              <p>Every home tells the story of the people who live there.</p>
+              <div class="begin-story link">
+                <a href="coming-soon.html" class="begin-story-text"> Now let's get to your's </a>
+              </div>
+            </div>
+          </div>
+          <div class="controls">
+            <div class="progress">1/4</div>
+            <div class="close link">&times;</div>
+            <div class="slide-controls">
+              <div class="next link">
+                <div class="next-arrow">
+                  <svg viewBox="0 0 6.4371204 10.149022">
+                    <g style="fill-opacity: 1" transform="translate(-61.355299,-35.864323)">
+                      <path
+                        style="fill-opacity: 1; fill-rule: evenodd; stroke-width: 0.264583; stroke-linecap: round; stroke-miterlimit: 2; stroke-dasharray: none; stroke-opacity: 1"
+                        d="m 61.489781,35.996635 -3.64e-4,5.31e-4 c -1.54e-4,1.24e-4 -5.92e-4,3.92e-4 -7.04e-4,5.32e-4 l -3.63e-4,5.3e-4 v 5.3e-4 l -3.64e-4,5.32e-4 -3.62e-4,5.3e-4 v 5.32e-4 5.32e-4 c -2e-6,2.4e-4 -2e-5,0.0013 0,0.0015 8.44e-4,0.006 0.0063,0.0159 0.016,0.02868 -0.0031,-0.01806 -0.0066,-0.02896 -0.0098,-0.03292 l -3.64e-4,-5.3e-4 c -1.51e-4,-1.2e-4 -9.36e-4,-9.72e-4 -0.0011,-10e-4 h -3.64e-4 -3.64e-4 c -1.52e-4,10e-7 -9.36e-4,-3.2e-5 -0.001,0 h -3.64e-4 z m 0.01381,0.03452 c 0.03056,0.176911 0.05241,1.011117 0.06542,2.12479 0.268111,0.307915 3.228656,2.681515 3.473888,2.782614 0.0073,-0.0029 0.01255,-0.0038 0.0149,-0.0027 v 5.31e-4 h 3.63e-4 l 3.64e-4,5.31e-4 v 5.32e-4 h 3.62e-4 v 5.3e-4 5.32e-4 5.3e-4 5.31e-4 5.3e-4 h -3.62e-4 v 5.31e-4 l -3.64e-4,5.32e-4 h -3.63e-4 v 5.3e-4 h -3.62e-4 c -0.0023,0.0011 -0.0072,-1.76e-4 -0.01453,-0.0032 -0.245231,0.101095 -3.205777,2.47523 -3.473886,2.783146 -0.01302,1.113673 -0.03486,1.947878 -0.06543,2.124789 0.331411,-0.435845 5.690345,-4.727772 6.128186,-4.907935 -0.437842,-0.180164 -5.796775,-4.471557 -6.128186,-4.907404 z m 6.128186,4.907404 c 0.01342,0.0055 0.02228,0.0072 0.02617,0.0049 h 3.63e-4 l 3.64e-4,-5.32e-4 3.63e-4,-5.3e-4 3.63e-4,-5.3e-4 3.64e-4,-5.31e-4 v -5.32e-4 l 3.63e-4,-5.31e-4 c 1.9e-5,-2.31e-4 0,-0.0013 10e-7,-0.0017 l -10e-7,-5.3e-4 v -5.31e-4 l -3.63e-4,-5.31e-4 v -5.32e-4 l -3.64e-4,-5.29e-4 -3.63e-4,-5.32e-4 -3.63e-4,-5.31e-4 -3.63e-4,-5.31e-4 c -0.0038,-0.0024 -0.01311,-0.0012 -0.02653,0.0042 z m -6.128186,4.907936 c -0.0098,0.01278 -0.01517,0.0222 -0.016,0.02814 -1.8e-5,2.57e-4 0,0.0013 10e-7,0.0017 l -10e-7,5.31e-4 10e-7,5.31e-4 v 5.31e-4 l 3.62e-4,5.3e-4 3.64e-4,5.31e-4 v 5.31e-4 c 1.35e-4,1.38e-4 9.37e-4,9.4e-4 0.0011,10e-4 h 3.64e-4 l 3.62e-4,5.31e-4 c 1.53e-4,3.1e-5 9.37e-4,-2e-6 0.0011,0 h 3.63e-4 3.65e-4 c 1.5e-4,-9e-5 9.36e-4,-4.11e-4 0.0011,-5.31e-4 l 3.63e-4,-5.32e-4 c 0.0033,-0.004 0.0071,-0.01539 0.01019,-0.03346 z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="prev link">
+                <div class="prev-arrow">
+                  <svg viewBox="0 0 6.4371204 10.149022">
+                    <g style="fill-opacity: 1" transform="translate(-76.765516,-36.222585)">
+                      <path
+                        style="fill-opacity: 1; fill-rule: evenodd; stroke-width: 0.264583; stroke-linecap: round; stroke-miterlimit: 2; stroke-dasharray: none; stroke-opacity: 1"
+                        d="m 83.068155,36.354897 3.64e-4,5.31e-4 c 1.54e-4,1.24e-4 5.92e-4,3.92e-4 7.04e-4,5.32e-4 l 3.63e-4,5.3e-4 v 5.3e-4 l 3.64e-4,5.32e-4 3.62e-4,5.3e-4 v 5.32e-4 5.32e-4 c 2e-6,2.4e-4 2e-5,0.0013 0,0.0015 -8.44e-4,0.006 -0.0063,0.0159 -0.016,0.02868 0.0031,-0.01806 0.0066,-0.02896 0.0098,-0.03292 l 3.64e-4,-5.3e-4 c 1.51e-4,-1.2e-4 9.36e-4,-9.72e-4 0.0011,-0.001 h 3.64e-4 3.64e-4 c 1.52e-4,1e-6 9.36e-4,-3.2e-5 10e-4,0 h 3.64e-4 z m -0.01381,0.03452 c -0.03056,0.176911 -0.05241,1.011117 -0.06542,2.12479 -0.268111,0.307915 -3.228656,2.681515 -3.473888,2.782614 -0.0073,-0.0029 -0.01255,-0.0038 -0.0149,-0.0027 v 5.31e-4 h -3.63e-4 l -3.64e-4,5.31e-4 v 5.32e-4 h -3.62e-4 v 5.3e-4 5.32e-4 5.3e-4 5.31e-4 5.3e-4 h 3.62e-4 v 5.31e-4 l 3.64e-4,5.32e-4 h 3.63e-4 v 5.3e-4 h 3.62e-4 c 0.0023,0.0011 0.0072,-1.76e-4 0.01453,-0.0032 0.245231,0.101095 3.205777,2.47523 3.473886,2.783146 0.01302,1.113673 0.03486,1.947878 0.06543,2.124789 -0.331411,-0.435845 -5.690345,-4.727772 -6.128186,-4.907935 0.437842,-0.180164 5.796775,-4.471557 6.128186,-4.907404 z m -6.128186,4.907404 c -0.01342,0.0055 -0.02228,0.0072 -0.02617,0.0049 h -3.63e-4 l -3.64e-4,-5.32e-4 -3.63e-4,-5.3e-4 -3.63e-4,-5.3e-4 -3.64e-4,-5.31e-4 v -5.32e-4 l -3.63e-4,-5.31e-4 c -1.9e-5,-2.31e-4 0,-0.0013 -10e-7,-0.0017 l 10e-7,-5.3e-4 v -5.31e-4 l 3.63e-4,-5.31e-4 v -5.32e-4 l 3.64e-4,-5.29e-4 3.63e-4,-5.32e-4 3.63e-4,-5.31e-4 3.63e-4,-5.31e-4 c 0.0038,-0.0024 0.01311,-0.0012 0.02653,0.0042 z m 6.128186,4.907936 c 0.0098,0.01278 0.01517,0.0222 0.016,0.02814 1.8e-5,2.57e-4 0,0.0013 -10e-7,0.0017 l 10e-7,5.31e-4 -10e-7,5.31e-4 v 5.31e-4 l -3.62e-4,5.3e-4 -3.64e-4,5.31e-4 v 5.31e-4 c -1.35e-4,1.38e-4 -9.37e-4,9.4e-4 -0.0011,10e-4 h -3.64e-4 l -3.62e-4,5.31e-4 c -1.53e-4,3.1e-5 -9.37e-4,-2e-6 -0.0011,0 h -3.63e-4 -3.65e-4 c -1.5e-4,-9e-5 -9.36e-4,-4.11e-4 -0.0011,-5.31e-4 l -3.63e-4,-5.32e-4 c -0.0033,-0.004 -0.0071,-0.01539 -0.01019,-0.03346 z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="play-pause-btn link">
+                <svg class="pause" viewBox="0 0 6.764029 9.6824026">
+                  <g style="fill-opacity: 1" transform="translate(-38.497255,-36.635028)">
+                    <g transform="translate(-0.07285368)">
+                      <path style="fill-rule: evenodd; stroke-width: 0.264583; stroke-linecap: round; stroke-miterlimit: 2" d="m 38.7024,36.767319 h 2.435565 v 9.41782 H 38.7024 Z" />
+                      <path style="fill-rule: evenodd; stroke-width: 0.264583; stroke-linecap: round; stroke-miterlimit: 2" d="m 42.766281,36.767319 h 2.435565 v 9.41782 h -2.435565 z" />
+                    </g>
+                  </g>
+                </svg>
+                <svg class="play" viewBox="0 0 9.0464296 9.8767481">
+                  <g style="fill-opacity: 1" transform="translate(-17.111927,-36.716985)">
+                    <path
+                      style="fill-opacity: 1; fill-rule: evenodd; stroke-width: 0.257814; stroke-linecap: round; stroke-miterlimit: 2; stroke-dasharray: none; stroke-opacity: 1"
+                      d="m 21.850237,42.433316 c 0.13818,-0.13818 -9.342262,-2.678457 -9.291685,-2.4897 0.05058,0.188757 6.990743,-6.751408 6.801986,-6.801986 -0.188757,-0.05058 2.35152,9.429865 2.489699,9.291686 z"
+                      transform="matrix(-1.0173119,0.25881905,0.2725879,0.96592583,27.91041,-0.17760338)"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="replay-btn link">
+                <svg viewBox="0 0 8.8635092 10.051825">
+                  <g style="fill-opacity: 1" transform="translate(-90.944048,-36.002488)">
+                    <path
+                      style="fill-opacity: 1; fill-rule: evenodd; stroke-width: 0.264583; stroke-linecap: round; stroke-miterlimit: 2"
+                      d="m 95.400013,36.148193 c -0.184858,0.175571 -3.173835,1.904492 -3.41806,1.977066 0.244225,0.07257 3.233202,1.801048 3.41806,1.976618 -0.02156,-0.09011 -0.03522,-0.603343 -0.04112,-1.232479 0.73547,-0.0047 1.442177,0.285533 1.962245,0.805852 1.074182,1.074576 1.074182,2.816947 0,3.891524 -1.074052,1.074707 -2.815574,1.074707 -3.889626,0 -0.524625,-0.524789 -0.81509,-1.239371 -0.805459,-1.981538 -0.50479,0.0089 -1.034905,0.02176 -1.549681,0.03667 2.89e-4,1.140639 0.453362,2.234466 1.259591,3.040952 1.679125,1.680016 4.401599,1.680016 6.080724,0 1.679193,-1.679945 1.679193,-4.403748 0,-6.083693 -0.806201,-0.806732 -1.899677,-1.260035 -3.039915,-1.260206 l 0.02861,-1.184179 h 4.47e-4"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+</BaseLayout>
+
