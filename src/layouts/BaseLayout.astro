@@ -3,6 +3,13 @@ import Header from "../components/header.astro";
 import TaskBar from "../components/task-bar.astro";
 import  MobileExplore  from "../components/mobile-explore.astro";
 import "../styles/style.css";
+
+interface Props{
+  bodyClass?: string;
+  mainClass?: string;
+}
+
+const {bodyClass="", mainClass=""} = Astro.props;
 ---
 
 <html lang="en">
@@ -14,10 +21,10 @@ import "../styles/style.css";
     <meta name="generator" content={Astro.generator} />
     <title>NuSpace Interiors</title>
   </head>
-  <body>
+  <body class={bodyClass}>
     <div class="body-wrapper">
       <Header />
-      <main>
+      <main class={mainClass}>
         <slot />
         <TaskBar />
         <MobileExplore/>
