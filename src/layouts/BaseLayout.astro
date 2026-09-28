@@ -15,11 +15,13 @@ import "../styles/style.css";
     <title>Astro</title>
   </head>
   <body>
-    <Header />
-    <main>
-      <slot />
-      <TaskBar />
-      <MobileExplore/>
-    </main>
+    <div class="body-wrapper">
+      <Header />
+      <main>
+        <slot />
+        <TaskBar />
+        <MobileExplore/>
+      </main>
+    </div>
   </body>
 </html>

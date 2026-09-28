@@ -225,13 +225,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     position: relative;
   }
 
-  body .body-wrapper {
+  :global(.body-wrapper) {
     max-width: var(--max-width);
-    width: 98%;
+    width: 100%;
     background: var(--bkgrnd-clr1);
+    margin-inline: auto;
   }
 
-  main {
+  :global(main) {
     padding-top: var(--header-height);
     max-width: 100%;
     margin-inline: auto;
@@ -595,14 +596,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     content: "";
     position: absolute;
     inset: 0;
-    top: calc(100% + 10vh);
+    
 
     min-height: 50px;
     /* background: red; */
     z-index: 5;
 
     @media (width <= 1024px) and (max-height: 600px), (orientation: portrait) {
-      top: calc(100% + 100vh);
+      inset: unset;
+      min-height: 12vh;
+      width: 100%;
     }
   }
 </style>
