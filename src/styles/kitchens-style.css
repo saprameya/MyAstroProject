@@ -19,7 +19,7 @@ body {
 }
 
 .kitchens-body .body-wrapper {
-  max-width: 98%;
+  /* max-width: 98%; */
 }
 
 .kitchens-main {
@@ -40,7 +40,7 @@ body {
 
   transform-origin: top;
   opacity: 0.05;
-  max-width: 98vw;
+  /* max-width: 98vw; */
   overflow-y: hidden;
   margin-bottom: 2rem;
 
