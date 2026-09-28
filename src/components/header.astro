@@ -1,35 +1,35 @@
 ---
-import { undefined } from "astro:schema";
-import Logo from "../../public/images/logo.svg";
-
 const pathname = Astro.url.pathname;
 
 const links = [
- { href: "/", label: "Home"},
- { href: "/kitchens", label: "kitchens"},
- { href: "/wardrobes", label: "wardrobes"},
- { href: "/alloy", label: "alloy"},
- { href: "/gallery", label: "gallery"},
-]
-  
-
-
+  { href: "/", label: "Home" },
+  { href: "/kitchens", label: "Kitchens" },
+  { href: "/wardrobes", label: "Wardrobes" },
+  { href: "/alloy", label: "Alloy" },
+  { href: "/gallery", label: "Gallery" },
+];
 ---
 
 <header>
-  <Logo class="logo" />
-  <div class="menu">
-    {links.map(({ href, label}) =>{
-      const isCurrent = pathname === href;
-      return(
-        <a
-          href = {href}
-          class:list={{ current: isCurrent}}
-          aria-current={isCurrent? "page" : undefined}
-        >
-          {label}
-        </a>
-      )
-    } )} </div>
-</header>
+  <a href="/" aria-label="Home">
+    <img class="logo" src="/images/logo.svg" alt="Company logo" />
+  </a>
 
+  <nav class="menu" aria-label="Main navigation">
+    {
+      links.map(({ href, label }) => {
+        const isCurrent = pathname === href;
+
+        return (
+          <a
+            href={href}
+            class:list={{ current: isCurrent }}
+            aria-current={isCurrent ? "page" : undefined}
+          >
+            {label}
+          </a>
+        );
+      })
+    }
+  </nav>
+</header>
