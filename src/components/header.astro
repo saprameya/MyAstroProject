@@ -1,38 +1,35 @@
 ---
+import { undefined } from "astro:schema";
 import Logo from "../../public/images/logo.svg";
+
+const pathname = Astro.url.pathname;
+
+const links = [
+ { href: "/", label: "Home"},
+ { href: "/kitchens", label: "kitchens"},
+ { href: "/wardrobes", label: "wardrobes"},
+ { href: "/alloy", label: "alloy"},
+ { href: "/gallery", label: "gallery"},
+]
+  
+
 
 ---
 
 <header>
   <Logo class="logo" />
   <div class="menu">
-    <a>
-      <div class="explore home-explore current-page">
-        <a href="/">
-          <p>Home</p>
+    {links.map(({ href, label}) =>{
+      const isCurrent = pathname === href;
+      return(
+        <a
+          href = {href}
+          class:list={{ current: isCurrent}}
+          aria-current={isCurrent? "page" : undefined}
+        >
+          {label}
         </a>
-      </div>
-    </a>
-    <a href="/kitchens">
-      <div class="explore kitchen-explore">
-        <p>KITCHENS</p>
-      </div>
-    </a>
-    <a href="/wardrobes">
-      <div class="explore bedroom-explore">
-        <p>Wardrobes</p>
-      </div>
-    </a>
-    <a href="/coming-soon">
-      <div class="explore Alloy">
-        <p>Materials</p>
-      </div>
-    </a>
-    <a href="/coming-soon">
-      <div class="explore gallery-explore">
-        <p>Gallery</p>
-      </div>
-    </a>
-  </div>
+      )
+    } )} </div>
 </header>
 

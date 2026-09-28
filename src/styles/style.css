@@ -148,7 +148,7 @@ body::-webkit-scrollbar-thumb,
 
 .body-wrapper {
   width: var(--max-width);
-  max-width: 98%;
+  max-width: 100%;
   max-height: fit-content;
   background: #f4e3d5;
   margin: 0 auto;
@@ -183,7 +183,7 @@ header {
   border-radius: 50%;
 }
 
-.current-page {
+a.current {
   font-weight: 600;
   background-color: var(--highlight-clr);
   padding-inline: 5px;
@@ -536,16 +536,15 @@ header {
   justify-content: space-around;
   color: var(--tagline-font-clr);
   margin-right: 1rem;
+  gap: 1rem;
   z-index: 50;
   /* background: hsl(from var(--tagline-font-clr) h s l / 0.2); */
   backdrop-filter: blur(1px);
 }
 
-.explore p {
-  padding-inline: 1rem;
-}
 
-.explore {
+
+.menu a {
   color: var(--tagline-font-clr);
   width: 100%;
   cursor: pointer;
@@ -760,9 +759,7 @@ header {
     font-size: 0.7rem;
     height: 100%;
   }
-  .explore p {
-    padding: 0.5rem;
-  }
+
 
   .menu :nth-child(4),
   .menu :nth-child(5) {
