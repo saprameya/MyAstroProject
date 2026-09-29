@@ -195,7 +195,7 @@ h2 {
   }
 }
 
-.scroll {
+.link.scroll {
   color: var(--accent-font-clr);
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -211,7 +211,7 @@ h2 {
   }
 }
 
-.scroll.clicked {
+.link.scroll.clicked {
   position: sticky;
   display: block;
   text-align: right;
@@ -219,7 +219,7 @@ h2 {
 
   visibility: hidden;
 }
-.scroll.clicked .arrow {
+.link.scroll.clicked .arrow {
   visibility: visible;
   stroke: var(--highlight-clr);
   stroke-width: 4;
