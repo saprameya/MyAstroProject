@@ -311,8 +311,7 @@ a.current {
 
 /* Countdown section styles */
 .countdown {
-  /* width: 100%;
-  min-height: fit-content; */
+  
   position: absolute;
   inset: 0;
   height: 100vh;
@@ -327,14 +326,14 @@ a.current {
 .countdown span {
   height: 2rem;
   width: 2rem;
-  background: url("images/house-grey.svg") center top / contain no-repeat;
+  background: url("/images/house-grey.svg") center top / contain no-repeat;
   transition:
     scale 300ms ease-in-out,
     opacity 300ms ease-in-out;
 }
 
 .countdown span.current-span {
-  background: url("images/house.svg") center top / contain no-repeat;
+  background: url("/images/house.svg") center top / contain no-repeat;
 }
 
 .slides {
