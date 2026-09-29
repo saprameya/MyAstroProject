@@ -148,7 +148,7 @@ body::-webkit-scrollbar-thumb,
 
 .body-wrapper {
   width: var(--max-width);
-  max-width: 100%;
+  max-width: 98%;
   max-height: fit-content;
   background: #f4e3d5;
   margin: 0 auto;
@@ -163,7 +163,7 @@ header {
   top: 0;
   z-index: 50;
   width: var(--max-width);
-  max-width: 100%;
+  max-width: 98%;
   background: linear-gradient(to right, #f9ede1, #f6e0ca, #eed0b4);
   background: #eed0b4;
 }
@@ -251,7 +251,7 @@ a.current {
 
 [class="hero-img"]::before,
 [class="hero-img none"]::before {
-  background: url("images/last-slide-stretched.webp") center / cover no-repeat;
+  background: url("/images/last-slide-stretched.webp") center / cover no-repeat;
   opacity: 1;
 }
 
@@ -311,7 +311,8 @@ a.current {
 
 /* Countdown section styles */
 .countdown {
-  
+  /* width: 100%;
+  min-height: fit-content; */
   position: absolute;
   inset: 0;
   height: 100vh;
@@ -368,7 +369,7 @@ a.current {
   margin: 1rem 0 5rem 0;
   padding: 0.3rem;
   color: var(--accent-font-clr);
-  background: hsl(from var(--tagline-font-clr) h s l / 0.3) url("images/right-arrow-light.png") calc(100% - 0.5rem) / 5ch no-repeat;
+  background: hsl(from var(--tagline-font-clr) h s l / 0.3) url("/images/right-arrow-light.png") calc(100% - 0.5rem) / 5ch no-repeat;
   mix-blend-mode: multiply;
   border-radius: 5px;
   border: transparent;
@@ -379,7 +380,7 @@ a.current {
 
 .learn-more-text:hover,
 .begin-story:hover {
-  background: hsl(from var(--highlight-clr) h s l / 0.3) url("images/right-arrow.png") calc(100% - 0.5rem) / 5ch no-repeat;
+  background: hsl(from var(--highlight-clr) h s l / 0.3) url("/images/right-arrow.png") calc(100% - 0.5rem) / 5ch no-repeat;
   border: 1px solid var(--tagline-font-clr);
   outline: 1px solid var(--highlight-clr);
   color: var(--tagline-font-clr);
@@ -529,21 +530,20 @@ a.current {
   object-position: bottom center;
 }
 
-.menu {
+.menu  {
   display: flex;
   align-items: center;
   justify-content: space-around;
   color: var(--tagline-font-clr);
   margin-right: 1rem;
-  gap: 1rem;
   z-index: 50;
   /* background: hsl(from var(--tagline-font-clr) h s l / 0.2); */
   backdrop-filter: blur(1px);
 }
 
 
-
 .menu a {
+  padding-inline: 1rem;
   color: var(--tagline-font-clr);
   width: 100%;
   cursor: pointer;
@@ -758,7 +758,9 @@ a.current {
     font-size: 0.7rem;
     height: 100%;
   }
-
+  .menu a {
+    padding: 0.5rem;
+  }
 
   .menu :nth-child(4),
   .menu :nth-child(5) {
@@ -784,7 +786,6 @@ a.current {
   }
 
   .mobile-explore {
-    
     display: flex;
     flex-wrap: wrap;
     font-size: 0.8rem;
