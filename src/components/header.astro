@@ -1,5 +1,10 @@
 ---
-const pathname = Astro.url.pathname;
+const normalizePath = (path: string) => {
+  if (path === "/") return "/";
+  return path.replace(/\/+$/, "");
+};
+
+const pathname = normalizePath(Astro.url.pathname);
 
 const links = [
   { href: "/", label: "Home" },
