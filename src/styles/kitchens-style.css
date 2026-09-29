@@ -18,13 +18,11 @@ body {
   height: 100%;
 }
 
-.kitchens-body .body-wrapper {
-  /* max-width: 98%; */
-}
+
 
 .kitchens-main {
   position: relative;
-  padding-top: 60px;
+  padding-top: var(--header-height);
   max-width: 100%;
   color: var(--tagline-font-clr);
   font-size: clamp(1rem, 1rem + 0.5vw, 1.5rem);
@@ -141,12 +139,12 @@ h2 {
 }
 
 .screen-title {
-  background: url(images/kitchen-window-view.webp) center / cover no-repeat;
+  background: url(/public/images/kitchen-window-view.webp) center / cover no-repeat;
   color: var(--accent-font-clr);
   min-height: 80vh;
 
   @media (width < 900px), (orientation: portrait) {
-    background: url(images/kitchen-landing-mobile.webp) left top / cover
+    background: url(/public/images/kitchen-landing-mobile.webp) left top / cover
       no-repeat;
   }
 }
@@ -186,7 +184,7 @@ h2 {
   }
 }
 
-.scroll {
+.link.scroll {
   color: var(--accent-font-clr);
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -289,7 +287,7 @@ h2 {
 }
 
 .realisation {
-  background: url(images/sunset.webp) center / cover no-repeat;
+  background: url(/public/images/sunset.webp) center / cover no-repeat;
   mix-blend-mode: multiply;
   min-height: 80vh;
 }
