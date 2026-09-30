@@ -183,7 +183,7 @@ header {
   border-radius: 50%;
 }
 
-.current {
+span.current {
   font-weight: 600;
   background-color: var(--highlight-clr);
   padding-inline: 5px;
