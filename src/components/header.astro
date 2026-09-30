@@ -16,7 +16,7 @@ const links = [
 ---
 
 <header>
-  <a href="/" aria-label="Home">
+  <a href={pathname === "/" ? "#" : "/"} aria-label="Home">
     <img class="logo" src="/images/logo.svg" alt="Company logo" />
   </a>
 
@@ -25,14 +25,12 @@ const links = [
       links.map(({ href, label }) => {
         const isCurrent = pathname === href;
 
-        return (
-          <a
-            href={href}
-            class:list={{ current: isCurrent }}
-            aria-current={isCurrent ? "page" : undefined}
-          >
+        return isCurrent ? (
+          <span class="current" aria-current="page">
             {label}
-          </a>
+          </span>
+        ) : (
+          <a href={href}>{label}</a>
         );
       })
     }

@@ -183,7 +183,7 @@ header {
   border-radius: 50%;
 }
 
-a.current {
+.current {
   font-weight: 600;
   background-color: var(--highlight-clr);
   padding-inline: 5px;
@@ -541,7 +541,7 @@ a.current {
   backdrop-filter: blur(1px);
 }
 
-
+.menu span,
 .menu a {
   padding-inline: 1rem;
   color: var(--tagline-font-clr);
@@ -758,6 +758,8 @@ a.current {
     font-size: 0.7rem;
     height: 100%;
   }
+
+  .menu span,
   .menu a {
     padding: 0.5rem;
   }
