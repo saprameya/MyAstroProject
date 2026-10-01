@@ -119,7 +119,7 @@ body {
 
   color: #000;
   position: absolute;
-  background-color: #f8eee5;
+  background-color: hsl(28, 58%, 94%);
   width: 100%;
   margin: auto;
 }
@@ -793,7 +793,6 @@ span.current {
     font-size: 0.8rem;
     gap: 1vw;
     width: 100%;
-    grid-area: 4/1/5/2;
     background: var(--bkgrnd-clr1);
     padding-inline: 1rem;
     justify-content: space-around;
@@ -802,13 +801,19 @@ span.current {
     z-index: 50;
   }
 
+  
+
   .mobile-explore-task {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 1rem;
-    padding-block: 0.5rem;
+    padding: 0.5rem;
     align-items: center;
+  }
+
+  .mobile-explore-current{
+    background: hsl(28, 58%, 94%);
   }
 
   .mobile-explore-task .arrow {
