@@ -808,7 +808,7 @@ span.current {
     flex-direction: column;
     width: 100%;
     gap: 1rem;
-    padding: 0.5rem;
+    padding-block: 0.5rem;
     align-items: center;
   }
 
