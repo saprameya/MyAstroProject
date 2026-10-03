@@ -11,10 +11,6 @@
   padding: 0;
 }
 
-:root {
-  --tagline-font-clr: hsl(26, 33%, 21%);
-  --highlight-clr: hsl(39, 100%, 58%);
-}
 
 /* 3. Smooth scroll and base body setup */
 html,
@@ -107,7 +103,6 @@ body {
   /* color variables */
   --accent-font-clr: hsl(30, 20%, 98%);
   --tagline-font-clr: hsl(26, 33%, 21%);
-  --bkgrnd-clr1: hsl(37, 24%, 76%);
   --bkgrnd-clr1: hsl(23, 59%, 92%);
   --bkgrnd-clr2: hsl(30, 24%, 73%);
   --highlight-clr: hsl(39, 100%, 58%);
@@ -115,11 +110,10 @@ body {
   /* number variables */
   --max-width: 1920px;
   --header-height: 60px;
-  --grid-col-width: calc(var(--max-width)/5);
 
-  color: #000;
+  color: var(--tagline-font-clr);
   position: absolute;
-  background-color: hsl(28, 58%, 94%);
+  background: var(--bkgrnd-clr1);
   width: 100%;
   margin: auto;
 }

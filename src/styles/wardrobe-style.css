@@ -1,23 +1,7 @@
 body {
-  /* variable declarations */
-  /* color variables */
-  --accent-font-clr: hsl(30, 20%, 98%);
-  --tagline-font-clr: hsl(26, 33%, 21%);
-  --bkgrnd-clr1: hsl(37, 24%, 76%);
-  --bkgrnd-clr1: hsl(23, 59%, 92%);
-  --bkgrnd-clr2: hsl(30, 24%, 73%);
-  --highlight-clr: hsl(39, 100%, 58%);
-
-  /* number variables */
-  --max-width: 1920px;
-  --header-height: 60px;
   --card-width: clamp(31.25rem, 21.4968rem + 44.586vw, 75rem);
   @media (width <= 1024px) and (max-height: 600px), (orientation: portrait) {
     --card-width: calc(100vw - 0.5rem);
-  }
-
-  @media (orientation: landscape) and (min-width: 1000px) and (min-height: 500px) {
-    --header-height: 45px;
   }
 }
 
@@ -66,7 +50,6 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  /* padding-top: var(--header-height); */
   background: linear-gradient(to right, var(--tagline-font-clr), transparent, var(--tagline-font-clr));
   mask: linear-gradient(transparent 10%, black);
   mix-blend-mode: multiply;
@@ -102,7 +85,6 @@ body {
     column-gap: 1rem;
     padding-bottom: 1rem;
     padding-inline: 0;
-    /* padding-top: clamp(100px, calc(30vh + 0.5rem), 60vh); */
   }
 
   @media (width < 500px) {
@@ -144,7 +126,6 @@ body {
   padding: 0;
   padding-left: 2rem;
   max-width: 30vw;
-  /* text-transform: uppercase; */
   @media (width <= 1024px) and (max-height: 600px), (orientation: portrait) {
     max-width: none;
     font-size: 1.2rem;
@@ -399,6 +380,5 @@ body {
   top: calc(100% + 10vh);
 
   min-height: 50px;
-  /* background: red; */
   z-index: 5;
 }
