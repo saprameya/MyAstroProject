@@ -11,7 +11,6 @@
   padding: 0;
 }
 
-
 /* 3. Smooth scroll and base body setup */
 html,
 body {
@@ -523,14 +522,13 @@ span.current {
   object-position: bottom center;
 }
 
-.menu  {
+.menu {
   display: flex;
   align-items: center;
   justify-content: space-around;
   color: var(--tagline-font-clr);
   margin-right: 1rem;
   z-index: 50;
-  /* background: hsl(from var(--tagline-font-clr) h s l / 0.2); */
   backdrop-filter: blur(1px);
 }
 
@@ -644,8 +642,6 @@ span.current {
     margin-inline: auto;
     margin-top: 0;
   }
-
-
 
   .tagline.init {
     position: absolute;
@@ -794,8 +790,6 @@ span.current {
     z-index: 50;
   }
 
-  
-
   .mobile-explore-task {
     display: flex;
     flex-direction: column;
@@ -805,7 +799,7 @@ span.current {
     align-items: center;
   }
 
-  .mobile-explore-current{
+  .mobile-explore-current {
     background: hsl(28, 58%, 94%);
   }
 
@@ -850,9 +844,6 @@ span.current {
     --header-height: 45px;
   }
 
-  /* header{
-    background: red;
-  } */
   .logo {
     width: 70px;
     margin: 0.5rem;
