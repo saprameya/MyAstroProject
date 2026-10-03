@@ -113,7 +113,6 @@ body {
 
   color: var(--tagline-font-clr);
   position: absolute;
-  background: hsl(from var(--bkgrnd-clr1) h s calc(l - 10));
   width: 100%;
   margin: auto;
 }
