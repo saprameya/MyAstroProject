@@ -178,7 +178,7 @@ header {
 .menu {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   color: var(--tagline-font-clr);
   margin-right: 1rem;
   z-index: 50;
@@ -195,7 +195,6 @@ header {
   padding-block: 0.3rem;
   text-transform: uppercase;
   border: 2px solid transparent;
-  
 }
 
 .menu a:hover{
@@ -206,7 +205,7 @@ header {
 span.current {
   font-weight: 900;
   position: relative;
-  top: -1px;
+  top: -0.1em;
 
 }
 
