@@ -204,8 +204,7 @@ header {
 
 
 span.current {
-background: hsl(from var(--tagline-font-clr) h s l /0.5);  
-color: var(--accent-font-clr);
+font-weight: 900;
 
 }
 
