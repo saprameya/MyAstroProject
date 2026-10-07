@@ -175,10 +175,38 @@ header {
   border-radius: 50%;
 }
 
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--tagline-font-clr);
+  margin-right: 1rem;
+  z-index: 50;
+  backdrop-filter: blur(1px);
+}
+
+.menu span,
+.menu a {
+  padding-inline: 1rem;
+  color: var(--tagline-font-clr);
+  font-weight: 400;
+  width: 100%;
+  cursor: pointer;
+  padding-block: 0.3rem;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  
+}
+
+.menu a:hover{
+  color: black;
+}
+
+
 span.current {
-  font-weight: 600;
-  background-color: var(--highlight-clr);
-  padding-inline: 5px;
+background: hsl(from var(--tagline-font-clr) h s l /0.5);  
+color: var(--accent-font-clr);
+
 }
 
 /* Hero section styles */
@@ -522,25 +550,7 @@ span.current {
   object-position: bottom center;
 }
 
-.menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  color: var(--tagline-font-clr);
-  margin-right: 1rem;
-  z-index: 50;
-  backdrop-filter: blur(1px);
-}
 
-.menu span,
-.menu a {
-  padding-inline: 1rem;
-  color: var(--tagline-font-clr);
-  width: 100%;
-  cursor: pointer;
-  padding-block: 0.5rem;
-  text-transform: uppercase;
-}
 
 .task-bar {
   position: sticky;
