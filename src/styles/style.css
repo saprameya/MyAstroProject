@@ -156,7 +156,6 @@ header {
   z-index: 50;
   width: var(--max-width);
   max-width: 98%;
-  background: linear-gradient(to right, #f9ede1, #f6e0ca, #eed0b4);
   background: #eed0b4;
 }
 

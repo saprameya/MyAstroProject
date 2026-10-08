@@ -10,7 +10,7 @@
 
 .kitchens-main {
   position: relative;
-  padding-top: --header-height;
+  padding-top: var(--header-height);
   max-width: 100%;
   color: var(--tagline-font-clr);
   font-size: clamp(1rem, 1rem + 0.5vw, 1.5rem);
