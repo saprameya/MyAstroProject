@@ -380,8 +380,18 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  top: calc(100% + 100vh);
+  top: calc(100% + 20vh);
 
+  
   min-height: 20vh;
   z-index: 5;
+
+  @media (width <= 1024px) and (max-height: 600px), (orientation: portrait) {
+    top: calc(100% + 80vh);
+    min-height: 5vh;
+  }
+   @media(width < 500px){
+    top: calc(100% + 20vh);
+    min-height: 20vh;
+   }
 }
