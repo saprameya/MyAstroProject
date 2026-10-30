@@ -148,7 +148,7 @@ body::-webkit-scrollbar-thumb,
 
 header {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   height: var(--header-height);
   position: fixed;
@@ -160,18 +160,11 @@ header {
 }
 
 .logo {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   margin: 0.5rem 1rem;
   padding: 1rem;
   z-index: 100;
-  background: linear-gradient(hsl(from var(--tagline-font-clr) h s l / 0.3), hsl(from var(--bkgrnd-clr1) h s l / 0.9));
-  backdrop-filter: blur(2px);
-  mix-blend-mode: multiply;
-  box-shadow: 0 0 7px 5px var(--accent-font-clr);
-  border: 1px solid var(--highlight-clr);
-  border-radius: 50%;
+  
 }
 
 .menu {
@@ -196,16 +189,14 @@ header {
   border: 2px solid transparent;
 }
 
-.menu a:hover{
+.menu a:hover {
   color: black;
 }
-
 
 span.current {
   font-weight: 900;
   position: relative;
   top: -0.1em;
-
 }
 
 /* Hero section styles */
@@ -549,8 +540,6 @@ span.current {
   object-position: bottom center;
 }
 
-
-
 .task-bar {
   position: sticky;
   display: flex;
@@ -639,8 +628,8 @@ span.current {
     width: 80px;
     margin: 1rem;
   }
-  
-   span.current{
+
+  span.current {
     top: 0;
   }
 
@@ -861,8 +850,6 @@ span.current {
     width: 70px;
     margin: 0.5rem;
   }
-
- 
 
   .hero {
     margin-top: 0;
