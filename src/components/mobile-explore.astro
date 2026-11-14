@@ -2,6 +2,7 @@
 import  KitchenIcon  from "./icons/KitchenIcon.astro";
 import  WardrobesIcon  from "./icons/WardrobesIcon.astro";
 import  MaterialsIcon  from "./icons/MaterialsIcon.astro";
+import  CaseStudiesIcon  from "./icons/CaseStudiesIcon.astro";
 import  ProcessIcon  from "./icons/ProcessIcon.astro";
 import  GalleryIcon  from "./icons/GalleryIcon.astro";
 import  ConsultIcon  from "./icons/ConsultIcon.astro";
@@ -14,17 +15,18 @@ const normalizePath = (path: string) => {
 const pathname = normalizePath(Astro.url.pathname);
 
 const links = [
-  {
-    href: "/kitchens",
-    label: "Kitchens",
-    icon: KitchenIcon
-  },
-  {
-    href: "/wardrobes",
-    label: "Wardrobes",
-    icon: WardrobesIcon
-  },
-  { href: "/alloy", label: "Materials", icon: MaterialsIcon },
+  // {
+  //   href: "/kitchens",
+  //   label: "Kitchens",
+  //   icon: KitchenIcon
+  // },
+  // {
+  //   href: "/wardrobes",
+  //   label: "Wardrobes",
+  //   icon: WardrobesIcon
+  // },
+  { href: "/alloy", label: "Alloy", icon: MaterialsIcon },
+  { href: "/case", label: "Case Studies", icon: CaseStudiesIcon},
   { href: "/process", label: "Process", icon: ProcessIcon},
   { href: "/gallery", label: "Gallery", icon: GalleryIcon},
   { href: "/consult", label: "Consult", icon: ConsultIcon},

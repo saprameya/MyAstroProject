@@ -93,7 +93,7 @@ a {
 }
 
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
 
   margin-inline: auto;
@@ -108,12 +108,18 @@ body {
 
   /* number variables */
   --max-width: 1920px;
-  --header-height: 60px;
+  --header-height: 120px;
 
   color: var(--tagline-font-clr);
   position: absolute;
   width: 100%;
   margin: auto;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular.ttf");
+  format:"ttf;"
 }
 
 html {
@@ -156,15 +162,15 @@ header {
   z-index: 50;
   width: var(--max-width);
   max-width: 98%;
-  background: #eed0b4;
+  background: var(--accent-font-clr);
 }
 
 .logo {
   position: relative;
-  margin: 0.5rem 1rem;
-  padding: 1rem;
-  z-index: 100;
+  top: 0;
+  left: 0;
   
+  z-index: 100;
 }
 
 .menu {
@@ -172,7 +178,7 @@ header {
   align-items: center;
   justify-content: space-between;
   color: var(--tagline-font-clr);
-  margin-right: 1rem;
+  
   z-index: 50;
   backdrop-filter: blur(1px);
 }
@@ -182,21 +188,22 @@ header {
   padding-inline: 1rem;
   color: var(--tagline-font-clr);
   font-weight: 400;
-  width: 100%;
   cursor: pointer;
   padding-block: 0.3rem;
   text-transform: uppercase;
   border: 2px solid transparent;
 }
 
-.menu a:hover {
+.menu a:hover{
   color: black;
 }
+
 
 span.current {
   font-weight: 900;
   position: relative;
   top: -0.1em;
+
 }
 
 /* Hero section styles */
@@ -540,6 +547,8 @@ span.current {
   object-position: bottom center;
 }
 
+
+
 .task-bar {
   position: sticky;
   display: flex;
@@ -619,8 +628,10 @@ span.current {
 }
 
 @media (width <= 1024px) and (max-height: 600px), (orientation: portrait), (pointer: coarse) and (hover: none) {
+  body{
+    --header-height: 90px;
+  }
   header {
-    background: var(--bkgrnd-clr1);
     border: transparent;
   }
 
@@ -628,8 +639,8 @@ span.current {
     width: 80px;
     margin: 1rem;
   }
-
-  span.current {
+  
+   span.current{
     top: 0;
   }
 
@@ -745,7 +756,6 @@ span.current {
   }
 
   .menu {
-    margin-right: 1rem;
     font-size: 0.7rem;
     height: 100%;
   }
@@ -755,9 +765,15 @@ span.current {
     padding: 0.5rem;
   }
 
-  .menu :nth-child(4),
-  .menu :nth-child(5) {
+  .menu > *{
     display: none;
+  }
+
+  .menu :nth-child(1),
+  .menu :nth-child(2),
+  .menu :nth-child(3)
+   {
+    display: block;
   }
 
   .task-bar {
@@ -784,11 +800,11 @@ span.current {
     font-size: 0.8rem;
     gap: 1vw;
     width: 100%;
-    background: var(--bkgrnd-clr1);
+    background: var(--accent-font-clr);
     padding-inline: 1rem;
     justify-content: space-around;
     position: fixed;
-    bottom: 0;
+    bottom: 5%;
     z-index: 50;
   }
 
@@ -797,7 +813,7 @@ span.current {
     flex-direction: column;
     width: 100%;
     gap: 1rem;
-    padding-block: 0.5rem;
+    padding: 0.5rem;
     align-items: center;
   }
 
@@ -839,17 +855,21 @@ span.current {
   .slides {
     height: 100%;
   }
+
+ 
 }
 
 @media (orientation: landscape) and (min-width: 1000px) and (min-height: 500px) {
   body {
-    --header-height: 45px;
+    --header-height: 90px;
   }
 
   .logo {
     width: 70px;
     margin: 0.5rem;
   }
+
+ 
 
   .hero {
     margin-top: 0;
