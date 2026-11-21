@@ -242,11 +242,13 @@ body {
   height: auto;
   border-radius: 5px;
   background: var(--bkgrnd-clr1);
+  cursor: pointer;
   gap: 1rem;
   justify-content: right;
   align-items: center;
   scroll-snap-align: center;
   scroll-margin-inline: 10rem;
+  opacity: 0.3;
   @media (width <= 1024px) and (max-height: 600px), (orientation: portrait) {
     flex-direction: column;
     gap: 0;
@@ -256,6 +258,7 @@ body {
 
 .card.current {
   background: hsl(from var(--bkgrnd-clr1) h calc(s + 50) l);
+  opacity: 1;
   @media (width <= 1024px) and (max-height: 600px), (orientation: portrait) {
     outline: 3px solid var(--tagline-font-clr);
   }

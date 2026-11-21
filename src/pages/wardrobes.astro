@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import "../styles/wardrobe-style.css"
+import "../styles/wardrobe-style.css";
 ---
 
-<BaseLayout bodyClass="wardrobes-body", mainClass="wardrobes-main">
+<BaseLayout bodyClass="wardrobes-body" , mainClass="wardrobes-main">
   <div class="wardrobes-hero">
     <div class="wardrobes-hero-img-wrapper">
       <picture>
@@ -38,7 +38,8 @@ import "../styles/wardrobe-style.css"
                     stroke-dashoffset: 20;
                     stroke-opacity: 1;
                   "
-              transform="translate(-692.895 -656.665)"></path>
+              transform="translate(-692.895 -656.665)"
+            ></path>
           </svg>
         </div>
       </a>
@@ -113,39 +114,49 @@ import "../styles/wardrobe-style.css"
         </div>
       </div>
     </div>
-    
   </div>
   <div class="carousel-buttons"></div>
 
-  
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      const carousel = document.querySelector(".card-container-wrapper");
+      const cards = [...document.querySelectorAll(".card")];
+      const buttonsContainer = document.querySelector(".carousel-buttons");
 
-<script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector(".card-container-wrapper");
-    const cards = [...document.querySelectorAll(".card")];
-    const buttonsContainer = document.querySelector(".carousel-buttons");
-
-    if (!carousel || !buttonsContainer || cards.length === 0) {
-      console.warn("Carousel elements were not found.");
-      return;
-    }
-
-    const buttons = [];
-
-    cards.forEach((card, index) => {
-      const button = document.createElement("button");
-
-      button.type = "button";
-      button.className = "carousel-button";
-      button.setAttribute("aria-label", `Go to card ${index + 1}`);
-
-      if (index === 0) {
-        button.classList.add("active");
+      if (!carousel || !buttonsContainer || cards.length === 0) {
+        console.warn("Carousel elements were not found.");
+        return;
       }
 
-      button.addEventListener("click", () => {
-  console.log(`first`)
+      const buttons = [];
 
+      cards.forEach((card, index) => {
+        const button = document.createElement("button");
+
+        button.type = "button";
+        button.className = "carousel-button";
+        button.setAttribute("aria-label", `Go to card ${index + 1}`);
+
+        if (index === 0) {
+          button.classList.add("active");
+        }
+
+        button.addEventListener("click", () => {
+          updateCurrentCard(card);
+          updateActiveButton(index);
+        });
+
+        buttonsContainer.appendChild(button);
+        buttons.push(button);
+
+        card.addEventListener("click", () => {
+          
+          updateCurrentCard(card);
+          updateActiveButton(index);
+        });
+      });
+
+      function updateCurrentCard(card) {
         const carouselCenter = carousel.clientWidth / 2;
         const cardCenter = card.offsetLeft + card.offsetWidth / 2;
 
@@ -153,50 +164,39 @@ import "../styles/wardrobe-style.css"
           left: cardCenter - carouselCenter,
           behavior: "smooth",
         });
+      }
 
-        updateActiveButton(index);
-      });
-
-      buttonsContainer.appendChild(button);
-      buttons.push(button);
-    });
-
-    function updateActiveButton(index) {
-      buttons.forEach((button, buttonIndex) => {
-        button.classList.toggle("active", buttonIndex === index);
-      });
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntry = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-        if (!visibleEntry) return;
-
-        const index = cards.indexOf(visibleEntry.target);
-
-        cards.forEach((card) => {
-          card.classList.remove("current");
+      function updateActiveButton(index) {
+        buttons.forEach((button, buttonIndex) => {
+          button.classList.toggle("active", buttonIndex === index);
         });
+      }
 
-        visibleEntry.target.classList.add("current");
-        updateActiveButton(index);
-      },
-      {
-        root: carousel,
-        threshold: [0.6],
-      },
-    );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const visibleEntry = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-    cards.forEach((card) => observer.observe(card));
+          if (!visibleEntry) return;
 
-    carousel.scrollLeft = 0;
-    updateActiveButton(0);
-  });
-</script>
+          const index = cards.indexOf(visibleEntry.target);
 
+          cards.forEach((card) => {
+            card.classList.remove("current");
+          });
+
+          visibleEntry.target.classList.add("current");
+          updateActiveButton(index);
+        },
+        {
+          root: carousel,
+          threshold: [0.6],
+        },
+      );
+
+      cards.forEach((card) => observer.observe(card));
+
+      carousel.scrollLeft = 0;
+      updateActiveButton(0);
+    });
+  </script>
 </BaseLayout>
-
-
